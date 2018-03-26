@@ -1,0 +1,6 @@
+framework module ZBadge {
+  umbrella header "ZBadge-umbrella.h"
+
+  export *
+  module * { export * }
+}

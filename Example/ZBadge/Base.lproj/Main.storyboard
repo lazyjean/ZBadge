@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MZf-10-6s5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="foz-SD-oNs">
+            <objects>
+                <tableViewController id="qWO-wr-hyT" customClass="TableViewController" customModule="ZBadge_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="6rL-UE-5A7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCellID" rowHeight="58" id="LJ1-mJ-kHe" customClass="TableViewCell" customModule="ZBadge_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LJ1-mJ-kHe" id="Yof-Us-Olo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueP-X1-F2j">
+                                            <rect key="frame" x="12" y="18" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdE-WA-C6i" customClass="ZBadge" customModule="ZBadge">
+                                            <rect key="frame" x="346" y="21.5" width="17" height="14.5"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="1"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ueP-X1-F2j" secondAttribute="trailing" constant="20" symbolic="YES" id="GYp-no-lkg"/>
+                                        <constraint firstItem="SdE-WA-C6i" firstAttribute="centerY" secondItem="Yof-Us-Olo" secondAttribute="centerY" id="fce-sV-jpz"/>
+                                        <constraint firstItem="ueP-X1-F2j" firstAttribute="leading" secondItem="Yof-Us-Olo" secondAttribute="leading" constant="12" id="g4o-cH-ly1"/>
+                                        <constraint firstItem="ueP-X1-F2j" firstAttribute="centerY" secondItem="Yof-Us-Olo" secondAttribute="centerY" id="kJv-Ft-wRB"/>
+                                        <constraint firstAttribute="trailing" secondItem="SdE-WA-C6i" secondAttribute="trailing" constant="12" id="r4y-PL-sL5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="badge" destination="SdE-WA-C6i" id="Jcx-5i-7Gj"/>
+                                    <outlet property="title" destination="ueP-X1-F2j" id="Qwi-Oa-3Nc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qWO-wr-hyT" id="B64-W0-Yhy"/>
+                            <outlet property="delegate" destination="qWO-wr-hyT" id="3Q6-DC-TkQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Cga-mj-PmH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5k-Ms-vTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.60000000000002" y="187.55622188905548"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WaT-2f-Ifi">
+            <objects>
+                <navigationController id="MZf-10-6s5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HUE-8u-cjC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qWO-wr-hyT" kind="relationship" relationship="rootViewController" id="dOt-NE-Tbx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="geO-QP-pxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-194" y="188"/>
+        </scene>
+    </scenes>
+</document>

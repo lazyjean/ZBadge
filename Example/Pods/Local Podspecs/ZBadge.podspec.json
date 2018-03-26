@@ -1,0 +1,23 @@
+{
+  "name": "ZBadge",
+  "version": "1.0.1",
+  "summary": "小红点组件",
+  "description": "实现小红点功能的组件,完全支持storyboard",
+  "homepage": "http://git.oschina.net/leeszi/ZBadge",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "刘真": "liuzhen@talkweb.com.cn"
+  },
+  "source": {
+    "git": "https://git.oschina.net/leeszi/ZBadge.git",
+    "tag": "1.0.1"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ZBadge/*.swift",
+  "frameworks": "UIKit"
+}
