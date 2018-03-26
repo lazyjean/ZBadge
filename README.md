@@ -22,7 +22,7 @@ pod "ZBadge"
 
 ## Author
 
-刘真, liuzhen@liuzhen.com.cn
+刘真, lazyjean@foxmail.com
 
 ## License
 
